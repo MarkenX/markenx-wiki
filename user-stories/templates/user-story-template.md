@@ -2,7 +2,6 @@
 
 User stories follow the standard format: "As a [type of user], I want [goal], so that [reason]".
 
-```markdown
 # US-XXX: [Story Title]
 
 **Epic**: [Link to parent epic]  
@@ -53,6 +52,5 @@ Acceptance criteria define the conditions that must be met for the story to be c
 ## Notes
 
 [Additional context, mockups, diagrams, or references]
-```
 
 ---
