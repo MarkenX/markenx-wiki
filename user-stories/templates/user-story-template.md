@@ -16,6 +16,54 @@
 
 ---
 
+## Reglas de Negocio
+
+[Las reglas de negocio definen la lógica, restricciones y comportamientos que rigen la funcionalidad. Cada regla debe tener un código único en formato RN-XXX. Estas reglas son independientes de los escenarios y describen "cómo funciona el sistema" en lugar de "cómo se prueba".]
+
+### **RN-001:** [Nombre descriptivo de la regla]
+
+[Descripción clara y concisa de la regla de negocio]
+
+[Ejemplo: "Estados de una tarea"]
+
+Los estados posibles de una tarea son:
+
+- **ESTADO_1**: [Descripción - Ejemplo: SIN EMPEZAR - No tiene intentos registrados]
+- **ESTADO_2**: [Descripción - Ejemplo: EN PROGRESO - Tiene al menos un intento activo]
+- **ESTADO_3**: [Descripción - Ejemplo: COMPLETADA - Superó la nota mínima de aprobación]
+
+### **RN-002:** [Nombre de la segunda regla]
+
+[Ejemplo: "Cálculo de calificación final"]
+
+La calificación final se calcula mediante:
+
+- [Fórmula o criterio - Ejemplo: Promedio ponderado de todos los intentos aprobados]
+- [Condición - Ejemplo: Si no hay intentos aprobados, la calificación es 0]
+- [Restricción - Ejemplo: La calificación máxima es 100 puntos]
+
+### **RN-003:** [Nombre de la tercera regla]
+
+[Ejemplo: "Disponibilidad de funcionalidades según rol"]
+
+| Rol | Funcionalidad A | Funcionalidad B | Funcionalidad C |
+|-----|----------------|-----------------|-----------------|
+| Estudiante | ✓ | ✓ | ✗ |
+| Docente | ✓ | ✓ | ✓ |
+| Administrador | ✓ | ✓ | ✓ |
+
+### **RN-004:** [Nombre de regla condicional]
+
+[Ejemplo: "Actualización automática de estados"]
+
+Cuando [condición - Ejemplo: la fecha actual supera la fecha límite]:
+
+- Si [condición A - Ejemplo: la tarea está COMPLETADA], entonces [resultado - Ejemplo: mantiene el estado COMPLETADA]
+- Si [condición B - Ejemplo: no hay intentos registrados], entonces [resultado - Ejemplo: cambia a VENCIDA]
+- Si [condición C - Ejemplo: hay intentos pero ninguno aprobado], entonces [resultado - Ejemplo: cambia a FALLIDA]
+
+---
+
 ## Escenarios
 
 [Los escenarios describen situaciones específicas de uso utilizando el formato Gherkin (Dado/Cuando/Entonces). Cada escenario debe tener un código único en formato [SC-XXX]]
@@ -58,6 +106,8 @@
 ---
 
 #### **Escenario [SC-002]** [Nombre del segundo escenario]
+
+[Considera incluir escenarios para:]
 
 - [Casos de uso felices (camino exitoso)]
 - [Casos de error o excepciones]
