@@ -35,8 +35,8 @@ Cuando la fecha actual supera la fecha límite de una tarea:
 - Una tarea tiene un número máximo de intentos configurado
 - El contador de "intento activo" indica cuántos intentos se han utilizado
 - Se pueden crear nuevos intentos mientras:
-  - No se haya alcanzado el número máximo de intentos, Y
-  - No se haya superado la fecha límite
+    - No se haya alcanzado el número máximo de intentos, Y
+    - No se haya superado la fecha límite
 
 ### **RN-004:** Acciones disponibles según estado
 
