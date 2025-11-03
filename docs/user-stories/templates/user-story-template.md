@@ -135,15 +135,15 @@ Cuando [condición - Ejemplo: la fecha actual supera la fecha límite]:
 ### Sistemas Externos o APIs
 
 - [Nombre del sistema/API - Endpoint/Versión - Propósito]
-  - [Ejemplo: API de Autenticación - /api/v1/auth - Validación de credenciales JWT]
-  - [Ejemplo: Servicio de Base de Datos - PostgreSQL 14+ - Almacenamiento de información de estudiantes]
+    - [Ejemplo: API de Autenticación - /api/v1/auth - Validación de credenciales JWT]
+    - [Ejemplo: Servicio de Base de Datos - PostgreSQL 14+ - Almacenamiento de información de estudiantes]
 
 ### Infraestructura Requerida
 
 - [Componente de infraestructura necesario]
-  - [Ejemplo: Servidor web con soporte HTTPS]
-  - [Ejemplo: Redis para gestión de sesiones]
-  - [Ejemplo: CDN para recursos estáticos]
+    - [Ejemplo: Servidor web con soporte HTTPS]
+    - [Ejemplo: Redis para gestión de sesiones]
+    - [Ejemplo: CDN para recursos estáticos]
 
 ---
 
