@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>HU-002: Navegación en el panel principal del estudiante - MarkenX Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MarkenX Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documentación</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Historias de Usuario</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#hu-002-navegacion-en-el-panel-principal-del-estudiante" class="nav-link">HU-002: Navegación en el panel principal del estudiante</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#escenarios" class="nav-link">Escenarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dependencias" class="nav-link">Dependencias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#consideraciones-generales" class="nav-link">Consideraciones Generales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#definicion-de-hecho" class="nav-link">Definición de Hecho</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comentarios" class="nav-link">Comentarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hu-002-navegacion-en-el-panel-principal-del-estudiante">HU-002: Navegación en el panel principal del estudiante</h1>
+<hr />
+<h2 id="objetivo">Objetivo</h2>
+<p><strong>Como</strong> estudiante que ha iniciado sesión en el sistema,<br />
+<strong>Quiero</strong> orientarme fácilmente al ingresar,<br />
+<strong>Para</strong> poder encontrar y acceder rápidamente a las funcionalidades principales del sistema sin confusión.</p>
+<hr />
+<h2 id="escenarios">Escenarios</h2>
+<h3 id="caracteristica-navegacion-hacia-las-funcionalidades-principales"><strong>Característica:</strong> Navegación hacia las funcionalidades principales</h3>
+<h4 id="antecedentes"><strong>Antecedentes:</strong></h4>
+<p><em>Dado</em> un estudiante llamado "David",<br />
+<em>Y</em> David cursa la materia de "Introducción al Marketing I",<br />
+<em>Y</em> David está registrado en una clase,<br />
+<em>Y</em> David ha iniciado sesión de manera exitosa en el sistema</p>
+<h4 id="escenario-sc-001-vista-inicial-al-ingresar-al-sistema"><strong>Escenario [SC-001]</strong> Vista inicial al ingresar al sistema</h4>
+<p><strong>Dado</strong> que David ha iniciado sesión,<br />
+<strong>Cuando</strong> accede al sistema,<br />
+<strong>Entonces</strong> debería visualizar un banner con la siguiente información:</p>
+<ul>
+<li>~~Logo de la Universidad de las Américas~~</li>
+<li>Nombre y NRC del curso al que pertenece David</li>
+<li>Mensaje de saludo con su nombre completo</li>
+<li>Opción para cerrar sesión  </li>
+</ul>
+<p><strong>Y</strong> debería ver accesos visibles a las demás funcionalidades principales:</p>
+<ul>
+<li>Evaluaciones</li>
+<li>Nueva partida</li>
+<li>Progreso  </li>
+</ul>
+<p><strong>Y</strong> debería visualizar la funcionalidad <em>"Tareas"</em> como vista por defecto</p>
+<hr />
+<h4 id="escenario-sc-002-navegacion-hacia-la-funcionalidad-tareas"><strong>Escenario [SC-002]</strong> Navegación hacia la funcionalidad <em>"Tareas"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Tareas"</em>,<br />
+<strong>Entonces</strong> debería ser redirigido a la pantalla de <em>"Tareas"</em></p>
+<hr />
+<h4 id="escenario-sc-003-navegacion-hacia-la-funcionalidad-evaluaciones"><strong>Escenario [SC-003]</strong> Navegación hacia la funcionalidad <em>"Evaluaciones"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Evaluaciones"</em>,<br />
+<strong>Entonces</strong> debería ser redirigido a la pantalla de <em>"Evaluaciones"</em></p>
+<hr />
+<h4 id="escenario-sc-004-visualizacion-de-las-opciones-dentro-de-nueva-partida"><strong>Escenario [SC-004]</strong> Visualización de las opciones dentro de <em>"Nueva partida"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Nueva partida"</em>,<br />
+<strong>Entonces</strong> debería visualizar las opciones:</p>
+<ul>
+<li>Normal</li>
+<li>Tutorial</li>
+</ul>
+<hr />
+<h4 id="escenario-sc-005-inicio-de-una-nueva-partida-normal"><strong>Escenario [SC-005]</strong> Inicio de una nueva <em>"Partida normal"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Y</strong> ha seleccionado la funcionalidad <em>"Nueva partida"</em>,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Normal"</em>,<br />
+<strong>Entonces</strong> debería ser redirigido a la pantalla de inicio de partida normal</p>
+<hr />
+<h4 id="escenario-sc-006-inicio-del-tutorial"><strong>Escenario [SC-006]</strong> Inicio del <em>"Tutorial"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Y</strong> ha seleccionado la funcionalidad <em>"Nueva partida"</em>,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Tutorial"</em>,<br />
+<strong>Entonces</strong> debería ser redirigido a la pantalla de tutorial</p>
+<hr />
+<h4 id="escenario-sc-007-navegacion-hacia-la-funcionalidad-progreso"><strong>Escenario [SC-007]</strong> Navegación hacia la funcionalidad <em>"Progreso"</em></h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Progreso"</em>,<br />
+<strong>Entonces</strong> debería ser redirigido a la pantalla de progreso</p>
+<hr />
+<h4 id="escenario-sc-008-visualizacion-del-loader-mientras-se-carga-la-informacion"><strong>Escenario [SC-008]</strong> Visualización del loader mientras se carga la información</h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Cuando</strong> el sistema está cargando la información necesaria,<br />
+<strong>Entonces</strong> debería visualizar un indicador de carga (loader)</p>
+<hr />
+<h4 id="escenario-sc-009-manejo-de-error-cuando-no-se-carga-la-informacion"><strong>Escenario [SC-009]</strong> Manejo de error cuando no se carga la información</h4>
+<p><strong>Dado</strong> que David ha accedido al sistema,<br />
+<strong>Y</strong> ocurre un error al cargar la información,<br />
+<strong>Cuando</strong> el sistema intenta mostrar la información,<br />
+<strong>Entonces</strong> debería visualizar un mensaje de error claro al usuario,<br />
+<strong>Y</strong> debería ofrecer opciones para reintentar la carga o cerrar sesión</p>
+<hr />
+<h4 id="escenario-sc-010-cerrar-sesion"><strong>Escenario [SC-010]</strong> Cerrar sesión</h4>
+<p><strong>Dado</strong> que David ha iniciado sesión en el sistema,<br />
+<strong>Cuando</strong> selecciona la opción <em>"Cerrar sesión"</em>,<br />
+<strong>Entonces</strong> debería ser desconectado del sistema,<br />
+<strong>Y</strong> debería ser redirigido a la página de inicio de sesión,<br />
+<strong>Y</strong> no debería poder acceder a las funcionalidades sin iniciar sesión nuevamente</p>
+<hr />
+<h2 id="dependencias">Dependencias</h2>
+<h3 id="historias-de-usuario-relacionadas">Historias de Usuario Relacionadas</h3>
+<p>N/A</p>
+<h3 id="sistemas-externos-o-apis">Sistemas Externos o APIs</h3>
+<p>N/A</p>
+<h3 id="infraestructura-requerida">Infraestructura Requerida</h3>
+<p>N/A</p>
+<hr />
+<h2 id="consideraciones-generales">Consideraciones Generales</h2>
+<h3 id="consideraciones-tecnicas">Consideraciones técnicas</h3>
+<h4 id="proteccion-de-datos-sensibles-del-estudiante">Protección de datos sensibles del estudiante</h4>
+<p><strong>Información del estudiante:</strong></p>
+<ul>
+<li>Nombre completo</li>
+<li>NRC (Número de Referencia de Curso)</li>
+</ul>
+<p><strong>Información de la asignatura:</strong></p>
+<ul>
+<li>Nombre del curso: "Introducción al Marketing I"</li>
+<li>Semestre académico actual (ejemplo: 2025-20)</li>
+</ul>
+<p>Para cumplir con la Ley Orgánica de Protección de Datos Personales del Ecuador (2021), Se utilizará protocolo HTTPS y JSON Web Token para la comunicación entre cliente y servidor, garantizando la confidencialidad de la información desde su captura hasta su almacenamiento. Adicionalmente la sesión se cerrará automáticamente después de cinco minutos de inactividad.</p>
+<hr />
+<h3 id="consideraciones-uiux">Consideraciones UI/UX</h3>
+<h4 id="responsividad">Responsividad</h4>
+<p>La interfaz se adaptará a pantallas de escritorio con un ancho mínimo de 1025px.</p>
+<h4 id="textos-y-ayudas">Textos y ayudas</h4>
+<ul>
+<li>Modo Tutorial: "Aprende el funcionamiento básico del videojuego con un escenario que abarca el tema de conducta del consumidor con guías paso a paso."</li>
+<li>Modo Normal: "Practica libremente en escenarios aleatorios de mercado."</li>
+<li>Asignaciones: "Completa tareas personalizadas asignadas por tu docente."</li>
+<li>Evaluaciones: "Demuestra tu conocimiento en evaluaciones con un solo intento."</li>
+<li>Progreso: "Revisa tu historial de partidas y tendencias de aprendizaje."</li>
+</ul>
+<h4 id="navegadores-compatibles">Navegadores compatibles</h4>
+<ul>
+<li>Google Chrome (versión 120 o superior)</li>
+<li>Mozilla Firefox (versión 115 o superior)</li>
+<li>Microsoft Edge (versión 120 o superior)</li>
+<li>Safari (versión 17 o superior)</li>
+</ul>
+<h4 id="accesibilidad">Accesibilidad</h4>
+<p>N/A</p>
+<h4 id="escalabilidad">Escalabilidad</h4>
+<p>La funcionalidad debe soportar hasta 90 usuarios concurrentes.</p>
+<h4 id="rendimiento">Rendimiento</h4>
+<p>El tiempo de carga de la página no debe exceder los 3 segundos, y las respuestas de la API no deben superar los 10 segundos.</p>
+<h4 id="referencias-de-diseno">Referencias de diseño</h4>
+<p><a href="https://www.figma.com/design/EtoLWsngop0Z2B179Mah36/MarkenX?node-id=0-1&amp;p=f&amp;t=goa0pm7wX0M8Lh1N-0">Enlace a Figma</a></p>
+<hr />
+<h2 id="definicion-de-hecho">Definición de Hecho</h2>
+<h3 id="desarrollo">Desarrollo</h3>
+<p>N/A</p>
+<h3 id="pruebas">Pruebas</h3>
+<p>N/A</p>
+<h3 id="calidad">Calidad</h3>
+<p>N/A</p>
+<h3 id="documentacion">Documentación</h3>
+<p>N/A</p>
+<h3 id="despliegue">Despliegue</h3>
+<p>N/A</p>
+<hr />
+<h2 id="comentarios">Comentarios</h2>
+<p>N/A</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

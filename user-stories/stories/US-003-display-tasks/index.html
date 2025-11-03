@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>HU-003: Gestión de Tareas del Estudiante - MarkenX Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MarkenX Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documentación</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Historias de Usuario</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#hu-003-gestion-de-tareas-del-estudiante" class="nav-link">HU-003: Gestión de Tareas del Estudiante</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reglas-de-negocio" class="nav-link">Reglas de Negocio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#escenarios" class="nav-link">Escenarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dependencias" class="nav-link">Dependencias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#consideraciones-generales" class="nav-link">Consideraciones Generales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#definicion-de-hecho" class="nav-link">Definición de Hecho</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comentarios" class="nav-link">Comentarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hu-003-gestion-de-tareas-del-estudiante">HU-003: Gestión de Tareas del Estudiante</h1>
+<hr />
+<h2 id="objetivo">Objetivo</h2>
+<p><strong>Como</strong> estudiante que ha iniciado sesión en el sistema,<br />
+<strong>Quiero</strong> visualizar y gestionar mis tareas de manera clara y ordenada,<br />
+<strong>Para</strong> poder conocer el estado de cada tarea, iniciar intentos y revisar mi progreso fácilmente.</p>
+<hr />
+<h2 id="reglas-de-negocio">Reglas de Negocio</h2>
+<h3 id="rn-001-estados-de-tareas"><strong>RN-001:</strong> Estados de tareas</h3>
+<p>Los estados posibles de una tarea son:</p>
+<ul>
+<li><strong>SIN EMPEZAR</strong>: No tiene intentos registrados</li>
+<li><strong>EN PROGRESO</strong>: Tiene al menos un intento sin completar o sin superar la nota mínima y no ha vencido</li>
+<li><strong>COMPLETADA</strong>: Al menos un intento superó la nota mínima de aprobación</li>
+<li><strong>FALLIDA</strong>: La fecha límite venció y ningún intento superó la nota mínima</li>
+<li><strong>VENCIDA</strong>: La fecha límite venció sin intentos registrados</li>
+</ul>
+<h3 id="rn-002-actualizacion-automatica-de-estados-por-vencimiento"><strong>RN-002:</strong> Actualización automática de estados por vencimiento</h3>
+<p>Cuando la fecha actual supera la fecha límite de una tarea:</p>
+<ul>
+<li>Si la tarea está <strong>COMPLETADA</strong>, mantiene el estado COMPLETADA</li>
+<li>Si no hay intentos registrados, cambia a <strong>VENCIDA</strong></li>
+<li>Si hay intentos pero ninguno superó la nota mínima, cambia a <strong>FALLIDA</strong></li>
+</ul>
+<h3 id="rn-003-disponibilidad-de-intentos"><strong>RN-003:</strong> Disponibilidad de intentos</h3>
+<ul>
+<li>Una tarea tiene un número máximo de intentos configurado</li>
+<li>El contador de "intento activo" indica cuántos intentos se han utilizado</li>
+<li>Se pueden crear nuevos intentos mientras:</li>
+<li>No se haya alcanzado el número máximo de intentos, Y</li>
+<li>No se haya superado la fecha límite</li>
+</ul>
+<h3 id="rn-004-acciones-disponibles-segun-estado"><strong>RN-004:</strong> Acciones disponibles según estado</h3>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>JUGAR</th>
+<th>NUEVO INTENTO</th>
+<th>HISTORIAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIN EMPEZAR</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>EN PROGRESO</td>
+<td>✗</td>
+<td>✓*</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>COMPLETADA</td>
+<td>✗</td>
+<td>✓*</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>FALLIDA</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>VENCIDA</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓**</td>
+</tr>
+</tbody>
+</table>
+<p><em>Solo si quedan intentos disponibles<br />
+</em>*Solo si existen intentos registrados</p>
+<h3 id="rn-005-ordenamiento-predeterminado"><strong>RN-005:</strong> Ordenamiento predeterminado</h3>
+<p>Las tareas se ordenan por fecha límite de la más reciente a la más antigua (descendente).</p>
+<h3 id="rn-006-informacion-de-tareas"><strong>RN-006:</strong> Información de tareas</h3>
+<p>Cada tarea debe mostrar:</p>
+<ul>
+<li>Título (máximo 100 caracteres)</li>
+<li>Resumen/Descripción</li>
+<li>Estado actual</li>
+<li>Número de intentos máximos permitidos</li>
+<li>Intento activo (intentos utilizados)</li>
+<li>Fecha límite</li>
+</ul>
+<hr />
+<h2 id="escenarios">Escenarios</h2>
+<h3 id="antecedentes-comunes"><strong>Antecedentes comunes:</strong></h3>
+<p><em>Dado</em> un estudiante llamado David,<br />
+<em>Y</em> está registrado en al menos una clase,<br />
+<em>Y</em> ha iniciado sesión de manera exitosa en el sistema,<br />
+<em>Y</em> ha accedido al panel de <em>Tareas</em> desde el menú principal</p>
+<hr />
+<h3 id="caracteristica-visualizacion-basica-del-panel-de-tareas"><strong>Característica:</strong> Visualización básica del panel de tareas</h3>
+<h4 id="escenario-sc-001-visualizacion-del-titulo-y-estructura-basica"><strong>Escenario [SC-001]</strong> Visualización del título y estructura básica</h4>
+<p><strong>Dado</strong> que el estudiante ha accedido al panel de Tareas,<br />
+<strong>Cuando</strong> se carga la página,<br />
+<strong>Entonces</strong> debería visualizar un título con el texto "Tareas"<br />
+<strong>Y</strong> debería ver una tabla con columnas para: Título, Resumen, Estado, Intentos Máximos, Intento Activo, Fecha Límite y Acciones</p>
+<hr />
+<h4 id="escenario-sc-002-listado-de-tareas-asignadas"><strong>Escenario [SC-002]</strong> Listado de tareas asignadas</h4>
+<p><strong>Dado</strong> que el estudiante tiene 5 tareas asignadas,<br />
+<strong>Cuando</strong> se carga el panel de Tareas,<br />
+<strong>Entonces</strong> debería ver las 5 tareas listadas en la tabla<br />
+<strong>Y</strong> cada tarea debería mostrar toda su información según RN-006</p>
+<hr />
+<h4 id="escenario-sc-003-ordenamiento-predeterminado-por-fecha-limite"><strong>Escenario [SC-003]</strong> Ordenamiento predeterminado por fecha límite</h4>
+<p><strong>Dado</strong> que existen tareas con las siguientes fechas límite:</p>
+<ul>
+<li>Tarea A: 2025-11-15</li>
+<li>Tarea B: 2025-11-10</li>
+<li>Tarea C: 2025-11-20</li>
+</ul>
+<p><strong>Cuando</strong> se carga el panel de Tareas,<br />
+<strong>Entonces</strong> las tareas deberían aparecer en el orden: Tarea C, Tarea A, Tarea B</p>
+<hr />
+<h3 id="caracteristica-filtrado-de-tareas"><strong>Característica:</strong> Filtrado de tareas</h3>
+<h4 id="escenario-sc-004-filtro-por-estado-un-estado-seleccionado"><strong>Escenario [SC-004]</strong> Filtro por estado - Un estado seleccionado</h4>
+<p><strong>Dado</strong> que existen tareas en diferentes estados:</p>
+<ul>
+<li>2 tareas SIN EMPEZAR</li>
+<li>3 tareas EN PROGRESO</li>
+<li>1 tarea COMPLETADA</li>
+</ul>
+<p><strong>Cuando</strong> el estudiante aplica el filtro de estado "EN PROGRESO",<br />
+<strong>Entonces</strong> debería visualizar únicamente las 3 tareas EN PROGRESO</p>
+<hr />
+<h4 id="escenario-sc-005-filtro-por-rango-de-fechas"><strong>Escenario [SC-005]</strong> Filtro por rango de fechas</h4>
+<p><strong>Dado</strong> que existen tareas con fechas límite entre 2025-11-01 y 2025-11-30,<br />
+<strong>Cuando</strong> el estudiante filtra por rango de fechas del 2025-11-10 al 2025-11-20,<br />
+<strong>Entonces</strong> debería visualizar únicamente las tareas cuya fecha límite esté dentro de ese rango</p>
+<hr />
+<h4 id="escenario-sc-006-combinacion-de-filtros"><strong>Escenario [SC-006]</strong> Combinación de filtros</h4>
+<p><strong>Dado</strong> que existen múltiples tareas con diferentes estados y fechas,<br />
+<strong>Cuando</strong> el estudiante aplica filtro de estado "COMPLETADA" Y rango de fechas del 2025-11-01 al 2025-11-15,<br />
+<strong>Entonces</strong> debería visualizar únicamente las tareas COMPLETADAS con fecha límite dentro del rango especificado</p>
+<hr />
+<h4 id="escenario-sc-007-resultado-vacio-en-filtros"><strong>Escenario [SC-007]</strong> Resultado vacío en filtros</h4>
+<p><strong>Dado</strong> que no existen tareas que cumplan los criterios de filtrado,<br />
+<strong>Cuando</strong> el estudiante aplica un filtro,<br />
+<strong>Entonces</strong> debería visualizar un mensaje indicando "No se encontraron tareas con los criterios seleccionados"</p>
+<hr />
+<h3 id="caracteristica-paginacion"><strong>Característica:</strong> Paginación</h3>
+<h4 id="escenario-sc-008-paginacion-con-mas-de-10-tareas"><strong>Escenario [SC-008]</strong> Paginación con más de 10 tareas</h4>
+<p><strong>Dado</strong> que el estudiante tiene 25 tareas asignadas,<br />
+<strong>Cuando</strong> se carga el panel de Tareas,<br />
+<strong>Entonces</strong> debería visualizar las primeras 10 tareas en la página 1<br />
+<strong>Y</strong> debería ver un control de paginación indicando "Página 1 de 3"</p>
+<hr />
+<h4 id="escenario-sc-009-navegacion-entre-paginas"><strong>Escenario [SC-009]</strong> Navegación entre páginas</h4>
+<p><strong>Dado</strong> que el estudiante está en la página 1 con 25 tareas totales,<br />
+<strong>Cuando</strong> el estudiante hace clic en "Siguiente" o selecciona la página 2,<br />
+<strong>Entonces</strong> debería visualizar las tareas de la 11 a la 20<br />
+<strong>Y</strong> el indicador debería mostrar "Página 2 de 3"</p>
+<hr />
+<h3 id="caracteristica-acciones-sobre-tareas"><strong>Característica:</strong> Acciones sobre tareas</h3>
+<h4 id="escenario-sc-010-boton-jugar-visible-en-tarea-sin-empezar"><strong>Escenario [SC-010]</strong> Botón JUGAR visible en tarea sin empezar</h4>
+<p><strong>Dado</strong> que existe una tarea en estado SIN EMPEZAR,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea en la tabla,<br />
+<strong>Entonces</strong> debería ver únicamente el botón "JUGAR" en la columna de acciones<br />
+<strong>Y</strong> NO debería ver los botones "NUEVO INTENTO" ni "HISTORIAL"</p>
+<hr />
+<h4 id="escenario-sc-011-inicio-del-primer-intento"><strong>Escenario [SC-011]</strong> Inicio del primer intento</h4>
+<p><strong>Dado</strong> que una tarea está en estado SIN EMPEZAR con 0 intentos activos,<br />
+<strong>Cuando</strong> el estudiante presiona el botón "JUGAR",<br />
+<strong>Entonces</strong> se debería crear un nuevo intento activo<br />
+<strong>Y</strong> el estado de la tarea debería cambiar a EN PROGRESO<br />
+<strong>Y</strong> el contador de intento activo debería mostrar 1</p>
+<hr />
+<h4 id="escenario-sc-012-botones-visibles-en-tarea-en-progreso-con-intentos-disponibles"><strong>Escenario [SC-012]</strong> Botones visibles en tarea en progreso con intentos disponibles</h4>
+<p><strong>Dado</strong> que existe una tarea en estado EN PROGRESO,<br />
+<strong>Y</strong> el intento activo es 2 de 5 intentos máximos,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea,<br />
+<strong>Entonces</strong> debería ver los botones "NUEVO INTENTO" y "HISTORIAL"<br />
+<strong>Y</strong> NO debería ver el botón "JUGAR"</p>
+<hr />
+<h4 id="escenario-sc-013-inicio-de-intento-adicional"><strong>Escenario [SC-013]</strong> Inicio de intento adicional</h4>
+<p><strong>Dado</strong> que una tarea está EN PROGRESO con 2 intentos utilizados de 5 máximos,<br />
+<strong>Cuando</strong> el estudiante presiona "NUEVO INTENTO",<br />
+<strong>Entonces</strong> se debería crear un nuevo intento<br />
+<strong>Y</strong> el contador de intento activo debería incrementarse a 3</p>
+<hr />
+<h4 id="escenario-sc-014-boton-nuevo-intento-oculto-cuando-se-agotan-intentos"><strong>Escenario [SC-014]</strong> Botón NUEVO INTENTO oculto cuando se agotan intentos</h4>
+<p><strong>Dado</strong> que una tarea está EN PROGRESO con 5 intentos utilizados de 5 máximos,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea,<br />
+<strong>Entonces</strong> NO debería ver el botón "NUEVO INTENTO"<br />
+<strong>Y</strong> debería ver únicamente el botón "HISTORIAL"</p>
+<hr />
+<h4 id="escenario-sc-015-botones-en-tarea-completada-con-intentos-disponibles"><strong>Escenario [SC-015]</strong> Botones en tarea completada con intentos disponibles</h4>
+<p><strong>Dado</strong> que una tarea está en estado COMPLETADA,<br />
+<strong>Y</strong> el intento activo es 2 de 5 intentos máximos,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea,<br />
+<strong>Entonces</strong> debería ver los botones "NUEVO INTENTO" y "HISTORIAL"</p>
+<hr />
+<h4 id="escenario-sc-016-visualizacion-del-historial-de-intentos"><strong>Escenario [SC-016]</strong> Visualización del historial de intentos</h4>
+<p><strong>Dado</strong> que una tarea tiene 3 intentos registrados con las siguientes calificaciones:</p>
+<ul>
+<li>Intento 1: 60 puntos, fecha 2025-11-01, estado: Reprobado</li>
+<li>Intento 2: 75 puntos, fecha 2025-11-05, estado: Aprobado</li>
+<li>Intento 3: 85 puntos, fecha 2025-11-08, estado: Aprobado</li>
+</ul>
+<p><strong>Cuando</strong> el estudiante presiona el botón "HISTORIAL",<br />
+<strong>Entonces</strong> debería visualizar un listado con los 3 intentos ordenados del más reciente al más antiguo<br />
+<strong>Y</strong> cada intento debería mostrar: número de intento, calificación, fecha y estado</p>
+<hr />
+<h3 id="caracteristica-actualizacion-automatica-de-estados"><strong>Característica:</strong> Actualización automática de estados</h3>
+<h4 id="escenario-sc-017-tarea-vencida-sin-intentos"><strong>Escenario [SC-017]</strong> Tarea vencida sin intentos</h4>
+<p><strong>Dado</strong> que una tarea está en estado SIN EMPEZAR con fecha límite 2025-11-01,<br />
+<strong>Cuando</strong> la fecha actual es 2025-11-02 y se actualiza el sistema,<br />
+<strong>Entonces</strong> el estado de la tarea debería cambiar automáticamente a VENCIDA</p>
+<hr />
+<h4 id="escenario-sc-018-tarea-fallida-por-vencimiento"><strong>Escenario [SC-018]</strong> Tarea fallida por vencimiento</h4>
+<p><strong>Dado</strong> que una tarea está EN PROGRESO con fecha límite 2025-11-01,<br />
+<strong>Y</strong> tiene 2 intentos registrados sin superar la nota mínima de aprobación,<br />
+<strong>Cuando</strong> la fecha actual es 2025-11-02 y se actualiza el sistema,<br />
+<strong>Entonces</strong> el estado de la tarea debería cambiar automáticamente a FALLIDA</p>
+<hr />
+<h4 id="escenario-sc-019-tarea-completada-mantiene-su-estado-tras-vencimiento"><strong>Escenario [SC-019]</strong> Tarea completada mantiene su estado tras vencimiento</h4>
+<p><strong>Dado</strong> que una tarea está en estado COMPLETADA con fecha límite 2025-11-01,<br />
+<strong>Cuando</strong> la fecha actual es 2025-11-02 y se actualiza el sistema,<br />
+<strong>Entonces</strong> el estado de la tarea debería permanecer como COMPLETADA</p>
+<hr />
+<h4 id="escenario-sc-020-boton-historial-visible-en-tarea-vencida-con-intentos"><strong>Escenario [SC-020]</strong> Botón HISTORIAL visible en tarea vencida con intentos</h4>
+<p><strong>Dado</strong> que una tarea cambió a estado VENCIDA y tiene 2 intentos registrados,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea,<br />
+<strong>Entonces</strong> debería ver únicamente el botón "HISTORIAL"<br />
+<strong>Y</strong> NO debería ver los botones "JUGAR" ni "NUEVO INTENTO"</p>
+<hr />
+<h4 id="escenario-sc-021-sin-acciones-disponibles-en-tarea-vencida-sin-intentos"><strong>Escenario [SC-021]</strong> Sin acciones disponibles en tarea vencida sin intentos</h4>
+<p><strong>Dado</strong> que una tarea cambió a estado VENCIDA sin intentos registrados,<br />
+<strong>Cuando</strong> el estudiante visualiza la tarea,<br />
+<strong>Entonces</strong> NO debería ver ningún botón de acción en la columna de acciones</p>
+<hr />
+<h2 id="dependencias">Dependencias</h2>
+<h3 id="historias-de-usuario-relacionadas">Historias de Usuario Relacionadas</h3>
+<ul>
+<li>HU-002: Navegación en el panel principal del estudiante</li>
+</ul>
+<h3 id="sistemas-externos-o-apis">Sistemas Externos o APIs</h3>
+<ul>
+<li>Servicio de Base de Datos - MySQL - Almacenamiento de información de tareas y registros de intentos</li>
+</ul>
+<h3 id="infraestructura-requerida">Infraestructura Requerida</h3>
+<p>N/A</p>
+<hr />
+<h2 id="consideraciones-generales">Consideraciones Generales</h2>
+<h3 id="consideraciones-tecnicas">Consideraciones técnicas</h3>
+<p>N/A</p>
+<hr />
+<h3 id="consideraciones-uiux">Consideraciones UI/UX</h3>
+<h4 id="responsividad">Responsividad</h4>
+<p>La interfaz se adaptará a pantallas de escritorio (≥1025px)</p>
+<h4 id="textos-y-ayudas">Textos y ayudas</h4>
+<ul>
+<li><strong>JUGAR</strong>: "Inicia el primer intento de la tarea"</li>
+<li><strong>NUEVO INTENTO</strong>: "Inicia un nuevo intento si hay intentos disponibles"</li>
+<li><strong>HISTORIAL</strong>: "Ver registro de intentos realizados"</li>
+</ul>
+<h4 id="navegadores-compatibles">Navegadores compatibles</h4>
+<ul>
+<li>Google Chrome (versión 120 o superior)</li>
+<li>Mozilla Firefox (versión 115 o superior)</li>
+<li>Microsoft Edge (versión 120 o superior)</li>
+<li>Safari (versión 17 o superior)</li>
+</ul>
+<h4 id="accesibilidad">Accesibilidad</h4>
+<ul>
+<li>Cumplimiento con WCAG 2.1 nivel AA</li>
+<li>Soporte para lectores de pantalla</li>
+<li>Navegación completa por teclado</li>
+</ul>
+<h4 id="escalabilidad">Escalabilidad</h4>
+<p>La funcionalidad debe soportar hasta 90 usuarios concurrentes</p>
+<h4 id="rendimiento">Rendimiento</h4>
+<ul>
+<li>Tiempo de carga de la página ≤ 3 segundos</li>
+<li>Respuesta de API ≤ 10 segundos</li>
+</ul>
+<h4 id="referencias-de-diseno">Referencias de diseño</h4>
+<p>N/A</p>
+<hr />
+<h2 id="definicion-de-hecho">Definición de Hecho</h2>
+<h3 id="desarrollo">Desarrollo</h3>
+<p>N/A</p>
+<h3 id="pruebas">Pruebas</h3>
+<p>N/A</p>
+<h3 id="calidad">Calidad</h3>
+<p>N/A</p>
+<h3 id="documentacion">Documentación</h3>
+<p>N/A</p>
+<h3 id="despliegue">Despliegue</h3>
+<p>N/A</p>
+<hr />
+<h2 id="comentarios">Comentarios</h2>
+<p>N/A</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>HU-004: Historial de Intentos de Tarea - MarkenX Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MarkenX Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Documentación</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Historias de Usuario</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#hu-004-historial-de-intentos-de-tarea" class="nav-link">HU-004: Historial de Intentos de Tarea</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#objetivo" class="nav-link">Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reglas-de-negocio" class="nav-link">Reglas de Negocio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#escenarios" class="nav-link">Escenarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dependencias" class="nav-link">Dependencias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#consideraciones-generales" class="nav-link">Consideraciones Generales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#definicion-de-hecho" class="nav-link">Definición de Hecho</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comentarios" class="nav-link">Comentarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hu-004-historial-de-intentos-de-tarea">HU-004: Historial de Intentos de Tarea</h1>
+<hr />
+<h2 id="objetivo">Objetivo</h2>
+<p><strong>Como</strong> estudiante que ha iniciado sesión en el sistema,<br />
+<strong>Quiero</strong> visualizar el historial completo de intentos realizados en una tarea específica,<br />
+<strong>Para</strong> revisar mi desempeño, analizar mi progreso y consultar estadísticas detalladas de cada intento.</p>
+<hr />
+<h2 id="reglas-de-negocio">Reglas de Negocio</h2>
+<h3 id="rn-001-estados-de-un-intento"><strong>RN-001:</strong> Estados de un intento</h3>
+<p>Los estados posibles de un intento son:</p>
+<ul>
+<li><strong>APROBADO</strong>: El intento alcanzó o superó la nota mínima de aprobación configurada para la tarea</li>
+<li><strong>REPROBADO</strong>: El intento no alcanzó la nota mínima de aprobación</li>
+</ul>
+<h3 id="rn-002-calculo-de-duracion-del-intento"><strong>RN-002:</strong> Cálculo de duración del intento</h3>
+<p>La duración de un intento se calcula como:</p>
+<ul>
+<li>Tiempo transcurrido desde el inicio hasta la finalización del intento</li>
+<li>Se muestra en formato HH:MM (horas:minutos)</li>
+<li>Ejemplo: 01:35 representa 1 hora y 35 minutos</li>
+</ul>
+<h3 id="rn-003-informacion-mostrada-por-intento"><strong>RN-003:</strong> Información mostrada por intento</h3>
+<p>Cada intento en el historial debe mostrar:</p>
+<ul>
+<li>Número de intento (secuencial)</li>
+<li>Puntuación obtenida</li>
+<li>Fecha de realización en formato dd/mm/yyyy</li>
+<li>Estado (APROBADO o REPROBADO según RN-001)</li>
+<li>Duración en formato HH:MM</li>
+<li>Acción de ESTADÍSTICAS disponible</li>
+</ul>
+<h3 id="rn-004-ordenamiento-de-intentos"><strong>RN-004:</strong> Ordenamiento de intentos</h3>
+<p>Los intentos se ordenan por fecha de realización del más reciente al más antiguo (descendente).</p>
+<h3 id="rn-005-calculo-de-intentos-restantes"><strong>RN-005:</strong> Cálculo de intentos restantes</h3>
+<ul>
+<li>Intentos restantes = Intentos máximos - Intentos realizados</li>
+<li>Si quedan 0 intentos: no se muestra información especial</li>
+<li>Si queda exactamente 1 intento: se debe destacar visualmente esta información</li>
+</ul>
+<h3 id="rn-006-acceso-al-historial"><strong>RN-006:</strong> Acceso al historial</h3>
+<p>El historial solo está disponible para tareas que tienen al menos un intento registrado.</p>
+<hr />
+<h2 id="escenarios">Escenarios</h2>
+<h3 id="antecedentes-comunes"><strong>Antecedentes comunes:</strong></h3>
+<p><em>Dado</em> un estudiante llamado David,<br />
+<em>Y</em> está registrado en al menos una clase,<br />
+<em>Y</em> ha iniciado sesión de manera exitosa en el sistema,<br />
+<em>Y</em> ha accedido al panel de Tareas</p>
+<hr />
+<h3 id="caracteristica-visualizacion-basica-del-historial"><strong>Característica:</strong> Visualización básica del historial</h3>
+<h4 id="escenario-sc-001-acceso-al-historial-desde-el-panel-de-tareas"><strong>Escenario [SC-001]</strong> Acceso al historial desde el panel de tareas</h4>
+<p><strong>Dado</strong> que existe una tarea llamada "Introducción al Marketing" con 3 intentos registrados,<br />
+<strong>Cuando</strong> el estudiante presiona el botón "HISTORIAL" de la tarea,<br />
+<strong>Entonces</strong> debería ser redirigido a una nueva página de historial de intentos<br />
+<strong>Y</strong> la URL debería cambiar para reflejar el contexto de la tarea</p>
+<hr />
+<h4 id="escenario-sc-002-visualizacion-del-encabezado-de-la-pagina"><strong>Escenario [SC-002]</strong> Visualización del encabezado de la página</h4>
+<p><strong>Dado</strong> que el estudiante accedió al historial de la tarea "Introducción al Marketing",<br />
+<strong>Y</strong> la descripción de la tarea es "Análisis de mercado y estrategias de ventas",<br />
+<strong>Cuando</strong> se carga la página de historial,<br />
+<strong>Entonces</strong> debería visualizar el título "Introducción al Marketing"<br />
+<strong>Y</strong> debería visualizar la descripción "Análisis de mercado y estrategias de ventas"</p>
+<hr />
+<h4 id="escenario-sc-003-visualizacion-de-la-tabla-de-intentos"><strong>Escenario [SC-003]</strong> Visualización de la tabla de intentos</h4>
+<p><strong>Dado</strong> que el estudiante está en la página de historial,<br />
+<strong>Cuando</strong> se carga la página,<br />
+<strong>Entonces</strong> debería ver una tabla con las siguientes columnas:</p>
+<ul>
+<li>Número de intento</li>
+<li>Puntuación</li>
+<li>Fecha</li>
+<li>Estado</li>
+<li>Duración</li>
+<li>Acciones</li>
+</ul>
+<hr />
+<h4 id="escenario-sc-004-listado-de-intentos-realizados"><strong>Escenario [SC-004]</strong> Listado de intentos realizados</h4>
+<p><strong>Dado</strong> que la tarea tiene 5 intentos registrados,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar los 5 intentos en la tabla<br />
+<strong>Y</strong> cada intento debería mostrar toda la información según RN-003</p>
+<hr />
+<h4 id="escenario-sc-005-ordenamiento-de-intentos-del-mas-nuevo-al-mas-viejo"><strong>Escenario [SC-005]</strong> Ordenamiento de intentos del más nuevo al más viejo</h4>
+<p><strong>Dado</strong> que existen intentos con las siguientes fechas:</p>
+<ul>
+<li>Intento 1: 01/11/2025</li>
+<li>Intento 2: 05/11/2025</li>
+<li>Intento 3: 03/11/2025</li>
+</ul>
+<p><strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> los intentos deberían aparecer en el orden: Intento 2, Intento 3, Intento 1</p>
+<hr />
+<h4 id="escenario-sc-006-visualizacion-de-estado-aprobado"><strong>Escenario [SC-006]</strong> Visualización de estado APROBADO</h4>
+<p><strong>Dado</strong> que un intento obtuvo 85 puntos,<br />
+<strong>Y</strong> la nota mínima de aprobación es 70 puntos,<br />
+<strong>Cuando</strong> se visualiza el intento en el historial,<br />
+<strong>Entonces</strong> el estado debería mostrarse como "APROBADO"</p>
+<hr />
+<h4 id="escenario-sc-007-visualizacion-de-estado-reprobado"><strong>Escenario [SC-007]</strong> Visualización de estado REPROBADO</h4>
+<p><strong>Dado</strong> que un intento obtuvo 60 puntos,<br />
+<strong>Y</strong> la nota mínima de aprobación es 70 puntos,<br />
+<strong>Cuando</strong> se visualiza el intento en el historial,<br />
+<strong>Entonces</strong> el estado debería mostrarse como "REPROBADO"</p>
+<hr />
+<h4 id="escenario-sc-008-formato-de-fecha-en-tabla"><strong>Escenario [SC-008]</strong> Formato de fecha en tabla</h4>
+<p><strong>Dado</strong> que un intento se realizó el 2025-11-15,<br />
+<strong>Cuando</strong> se visualiza en el historial,<br />
+<strong>Entonces</strong> la fecha debería mostrarse como "15/11/2025"</p>
+<hr />
+<h4 id="escenario-sc-009-formato-de-duracion-en-tabla"><strong>Escenario [SC-009]</strong> Formato de duración en tabla</h4>
+<p><strong>Dado</strong> que un intento duró 95 minutos,<br />
+<strong>Cuando</strong> se visualiza en el historial,<br />
+<strong>Entonces</strong> la duración debería mostrarse como "01:35"</p>
+<hr />
+<h3 id="caracteristica-contador-de-intentos-restantes"><strong>Característica:</strong> Contador de intentos restantes</h3>
+<h4 id="escenario-sc-010-visualizacion-de-intentos-restantes-multiples-intentos-disponibles"><strong>Escenario [SC-010]</strong> Visualización de intentos restantes - Múltiples intentos disponibles</h4>
+<p><strong>Dado</strong> que la tarea permite 5 intentos máximos,<br />
+<strong>Y</strong> se han realizado 3 intentos,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar el texto "Intentos restantes: 2"</p>
+<hr />
+<h4 id="escenario-sc-011-destacado-visual-cuando-queda-un-solo-intento"><strong>Escenario [SC-011]</strong> Destacado visual cuando queda un solo intento</h4>
+<p><strong>Dado</strong> que la tarea permite 5 intentos máximos,<br />
+<strong>Y</strong> se han realizado 4 intentos,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar el texto "Intentos restantes: 1"<br />
+<strong>Y</strong> el texto debería estar destacado visualmente (por ejemplo, en color rojo o con un ícono de advertencia)</p>
+<hr />
+<h4 id="escenario-sc-012-sin-intentos-restantes"><strong>Escenario [SC-012]</strong> Sin intentos restantes</h4>
+<p><strong>Dado</strong> que la tarea permite 5 intentos máximos,<br />
+<strong>Y</strong> se han realizado 5 intentos,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar el texto "Intentos restantes: 0"<br />
+<strong>Y</strong> NO debería haber ningún destacado visual especial</p>
+<hr />
+<h3 id="caracteristica-filtrado-de-intentos"><strong>Característica:</strong> Filtrado de intentos</h3>
+<h4 id="escenario-sc-013-filtro-por-estado-aprobado"><strong>Escenario [SC-013]</strong> Filtro por estado - APROBADO</h4>
+<p><strong>Dado</strong> que existen los siguientes intentos:</p>
+<ul>
+<li>Intento 1: REPROBADO</li>
+<li>Intento 2: APROBADO</li>
+<li>Intento 3: APROBADO</li>
+<li>Intento 4: REPROBADO</li>
+</ul>
+<p><strong>Cuando</strong> el estudiante aplica el filtro de estado "APROBADO",<br />
+<strong>Entonces</strong> debería visualizar únicamente los intentos 2 y 3</p>
+<hr />
+<h4 id="escenario-sc-014-filtro-por-estado-reprobado"><strong>Escenario [SC-014]</strong> Filtro por estado - REPROBADO</h4>
+<p><strong>Dado</strong> que existen los siguientes intentos:</p>
+<ul>
+<li>Intento 1: REPROBADO</li>
+<li>Intento 2: APROBADO</li>
+<li>Intento 3: REPROBADO</li>
+</ul>
+<p><strong>Cuando</strong> el estudiante aplica el filtro de estado "REPROBADO",<br />
+<strong>Entonces</strong> debería visualizar únicamente los intentos 1 y 3</p>
+<hr />
+<h4 id="escenario-sc-015-filtro-por-rango-de-fechas"><strong>Escenario [SC-015]</strong> Filtro por rango de fechas</h4>
+<p><strong>Dado</strong> que existen intentos realizados entre 01/11/2025 y 30/11/2025,<br />
+<strong>Cuando</strong> el estudiante filtra por rango de fechas del 10/11/2025 al 20/11/2025,<br />
+<strong>Entonces</strong> debería visualizar únicamente los intentos cuya fecha de realización esté dentro de ese rango</p>
+<hr />
+<h4 id="escenario-sc-016-combinacion-de-filtros"><strong>Escenario [SC-016]</strong> Combinación de filtros</h4>
+<p><strong>Dado</strong> que existen múltiples intentos con diferentes estados y fechas,<br />
+<strong>Cuando</strong> el estudiante aplica filtro de estado "APROBADO" Y rango de fechas del 01/11/2025 al 15/11/2025,<br />
+<strong>Entonces</strong> debería visualizar únicamente los intentos APROBADOS realizados dentro del rango de fechas especificado</p>
+<hr />
+<h4 id="escenario-sc-017-resultado-vacio-en-filtros"><strong>Escenario [SC-017]</strong> Resultado vacío en filtros</h4>
+<p><strong>Dado</strong> que no existen intentos que cumplan los criterios de filtrado,<br />
+<strong>Cuando</strong> el estudiante aplica un filtro,<br />
+<strong>Entonces</strong> debería visualizar un mensaje indicando "No se encontraron intentos con los criterios seleccionados"</p>
+<hr />
+<h4 id="escenario-sc-018-limpieza-de-filtros"><strong>Escenario [SC-018]</strong> Limpieza de filtros</h4>
+<p><strong>Dado</strong> que el estudiante tiene filtros aplicados,<br />
+<strong>Y</strong> está visualizando resultados filtrados,<br />
+<strong>Cuando</strong> el estudiante limpia o resetea los filtros,<br />
+<strong>Entonces</strong> debería visualizar todos los intentos nuevamente</p>
+<hr />
+<h3 id="caracteristica-paginacion"><strong>Característica:</strong> Paginación</h3>
+<h4 id="escenario-sc-019-paginacion-con-mas-de-10-intentos"><strong>Escenario [SC-019]</strong> Paginación con más de 10 intentos</h4>
+<p><strong>Dado</strong> que la tarea tiene 25 intentos registrados,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar los primeros 10 intentos en la página 1<br />
+<strong>Y</strong> debería ver un control de paginación indicando "Página 1 de 3"</p>
+<hr />
+<h4 id="escenario-sc-020-navegacion-entre-paginas"><strong>Escenario [SC-020]</strong> Navegación entre páginas</h4>
+<p><strong>Dado</strong> que el estudiante está en la página 1 con 25 intentos totales,<br />
+<strong>Cuando</strong> el estudiante hace clic en "Siguiente" o selecciona la página 2,<br />
+<strong>Entonces</strong> debería visualizar los intentos del 11 al 20<br />
+<strong>Y</strong> el indicador debería mostrar "Página 2 de 3"</p>
+<hr />
+<h4 id="escenario-sc-021-paginacion-con-menos-de-10-intentos"><strong>Escenario [SC-021]</strong> Paginación con menos de 10 intentos</h4>
+<p><strong>Dado</strong> que la tarea tiene 8 intentos registrados,<br />
+<strong>Cuando</strong> se carga el historial,<br />
+<strong>Entonces</strong> debería visualizar los 8 intentos en una única página<br />
+<strong>Y</strong> NO debería mostrar controles de paginación</p>
+<hr />
+<h4 id="escenario-sc-022-paginacion-despues-de-aplicar-filtros"><strong>Escenario [SC-022]</strong> Paginación después de aplicar filtros</h4>
+<p><strong>Dado</strong> que el estudiante aplicó filtros que resultaron en 15 intentos,<br />
+<strong>Cuando</strong> se muestran los resultados filtrados,<br />
+<strong>Entonces</strong> debería ver los primeros 10 intentos en la página 1<br />
+<strong>Y</strong> debería poder navegar a la página 2 para ver los 5 intentos restantes</p>
+<hr />
+<h3 id="caracteristica-acceso-a-estadisticas"><strong>Característica:</strong> Acceso a estadísticas</h3>
+<h4 id="escenario-sc-023-boton-estadisticas-visible-en-todos-los-intentos"><strong>Escenario [SC-023]</strong> Botón ESTADÍSTICAS visible en todos los intentos</h4>
+<p><strong>Dado</strong> que existen múltiples intentos en el historial,<br />
+<strong>Cuando</strong> el estudiante visualiza la tabla,<br />
+<strong>Entonces</strong> cada intento debería tener un botón "ESTADÍSTICAS" o "STATS" en la columna de acciones</p>
+<hr />
+<h4 id="escenario-sc-024-acceso-a-estadisticas-de-un-intento-especifico"><strong>Escenario [SC-024]</strong> Acceso a estadísticas de un intento específico</h4>
+<p><strong>Dado</strong> que el estudiante está visualizando el historial,<br />
+<strong>Cuando</strong> presiona el botón "ESTADÍSTICAS" del intento número 3,<br />
+<strong>Entonces</strong> debería ser redirigido a la página de estadísticas de ese intento específico</p>
+<hr />
+<h3 id="caracteristica-navegacion-y-retorno"><strong>Característica:</strong> Navegación y retorno</h3>
+<h4 id="escenario-sc-025-boton-de-retorno-al-panel-de-tareas"><strong>Escenario [SC-025]</strong> Botón de retorno al panel de tareas</h4>
+<p><strong>Dado</strong> que el estudiante está en la página de historial,<br />
+<strong>Cuando</strong> presiona el botón de "Volver" o el botón de navegación hacia atrás,<br />
+<strong>Entonces</strong> debería regresar al panel de Tareas<br />
+<strong>Y</strong> debería mantener el estado de filtros y paginación que tenía antes</p>
+<hr />
+<h2 id="dependencias">Dependencias</h2>
+<h3 id="historias-de-usuario-relacionadas">Historias de Usuario Relacionadas</h3>
+<ul>
+<li>HU-010: Gestión de Tareas del Estudiante</li>
+</ul>
+<h3 id="sistemas-externos-o-apis">Sistemas Externos o APIs</h3>
+<ul>
+<li>Servicio de Base de Datos - MySQL - Consulta de intentos y datos relacionados con tareas</li>
+</ul>
+<h3 id="infraestructura-requerida">Infraestructura Requerida</h3>
+<p>N/A</p>
+<hr />
+<h2 id="consideraciones-generales">Consideraciones Generales</h2>
+<h3 id="consideraciones-tecnicas">Consideraciones técnicas</h3>
+<h4 id="proteccion-de-datos-del-estudiante">Protección de datos del estudiante</h4>
+<p><strong>Información del intento:</strong></p>
+<ul>
+<li>Puntuación obtenida</li>
+<li>Fecha y hora de realización</li>
+<li>Duración del intento</li>
+<li>Estado del intento</li>
+</ul>
+<p><strong>Información de la tarea:</strong></p>
+<ul>
+<li>Título de la tarea</li>
+<li>Descripción de la tarea</li>
+<li>Configuración de intentos máximos</li>
+</ul>
+<p>Para cumplir con la Ley Orgánica de Protección de Datos Personales del Ecuador (2021), se utilizará protocolo HTTPS para todas las comunicaciones. Los datos del historial son privados y solo accesibles por el estudiante propietario. La sesión se cerrará automáticamente después de cinco minutos de inactividad.</p>
+<hr />
+<h3 id="consideraciones-uiux">Consideraciones UI/UX</h3>
+<h4 id="responsividad">Responsividad</h4>
+<p>La interfaz se adaptará a pantallas de escritorio (≥1025px)</p>
+<h4 id="textos-y-ayudas">Textos y ayudas</h4>
+<ul>
+<li><strong>ESTADÍSTICAS/STATS</strong>: "Ver estadísticas detalladas de desempeño de este intento"</li>
+<li><strong>Intentos restantes (cuando queda 1)</strong>: "¡Atención! Solo te queda 1 intento disponible"</li>
+<li><strong>Filtro por estado</strong>: "Filtra los intentos por su resultado (Aprobado o Reprobado)"</li>
+<li><strong>Filtro por fecha</strong>: "Selecciona un rango de fechas para ver intentos realizados en ese período"</li>
+</ul>
+<h4 id="navegadores-compatibles">Navegadores compatibles</h4>
+<ul>
+<li>Google Chrome (versión 120 o superior)</li>
+<li>Mozilla Firefox (versión 115 o superior)</li>
+<li>Microsoft Edge (versión 120 o superior)</li>
+<li>Safari (versión 17 o superior)</li>
+</ul>
+<h4 id="accesibilidad">Accesibilidad</h4>
+<ul>
+<li>Cumplimiento con WCAG 2.1 nivel AA</li>
+<li>Soporte para lectores de pantalla</li>
+<li>Navegación completa por teclado</li>
+<li>Contraste adecuado para el texto de advertencia de "1 intento restante"</li>
+</ul>
+<h4 id="escalabilidad">Escalabilidad</h4>
+<p>La funcionalidad debe soportar hasta 90 usuarios concurrentes</p>
+<h4 id="rendimiento">Rendimiento</h4>
+<ul>
+<li>Tiempo de carga de la página ≤ 3 segundos</li>
+<li>Respuesta de API para consulta de intentos ≤ 10 segundos</li>
+<li>Carga optimizada de intentos mediante paginación</li>
+</ul>
+<h4 id="referencias-de-diseno">Referencias de diseño</h4>
+<p>N/A</p>
+<hr />
+<h2 id="definicion-de-hecho">Definición de Hecho</h2>
+<p>N/A</p>
+<hr />
+<h2 id="comentarios">Comentarios</h2>
+<p>N/A</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
