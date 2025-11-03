@@ -1,0 +1,153 @@
+# HU-002: Navegación en el panel principal del estudiante
+
+## Objetivo
+
+**Como** estudiante que ha iniciado sesión en el sistema,  
+**Quiero** orientarme fácilmente al ingresar,  
+**Para** poder encontrar y acceder rápidamente a las funcionalidades principales del sistema sin confusión.
+
+## Escenarios
+
+### **Característica:** Navegación hacia las funcionalidades principales
+
+#### **Antecedentes:**
+
+*Dado* un estudiante llamado "David"
+*Y* David cursa la materia de "Introducción al Marketing I"
+*Y* David está registrado en una clase
+*Y* David ha iniciado sesión de manera exitosa en el sistema
+
+#### **Escenario [SC-001]** Vista inicial al ingresar al sistema
+
+**Dado** que David ha iniciado sesión
+**Cuando** accede al sistema
+**Entonces** debería visualizar un banner con la siguiente información:
+
+- Logo de la Univeridad de las Américas
+- Nombre y NRC del curso al que pertenece David
+- Mensaje de saludo con su nombre completo
+- Opción para cerrar sesión  
+**Y** debería ver accesos visibles a las demás funcionalidades principales:
+- Evaluaciones
+- Nueva partida
+- Progreso  
+**Y** debería visualizar la funcionalidad "Asignaciones" como vista por defecto
+
+#### **Escenario [SC-002]** Navegación hacia la funcionalidad "Asignaciones"
+
+**Dado** que David ha accedido al sistema
+**Cuando** selecciona la opción "Asignaciones"
+**Entonces** debería ser redirigido a la pantalla de "Asignaciones"
+
+#### **Escenario [SC-003]** Navegación hacia la funcionalidad "Evaluaciones"
+
+**Dado** que David ha accedido al sistema
+**Cuando** selecciona la opción "Evaluaciones"
+**Entonces** debería ser redirigido a la pantalla de "Evaluaciones"
+
+#### **Escenario [SC-004]** Visualización de las opciones dentro de "Nueva partida"
+
+**Dado** que David ha accedido al sistema
+**Cuando** selecciona la opción "Modos de juego"
+**Entonces** debería visualizar las opciones:
+
+- Normal
+- Tutorial
+
+#### **Escenario [SC-005]** Inicio de una nueva "Partida normal"
+
+**Dado** que David ha accedido al sistema
+**Y** ha seleccionado la funcionalidad "Nueva partida"
+**Cuando** selecciona la opción "Normal"
+**Entonces** debería ser redirigido a la pantalla de inicio de partida normal
+
+#### **Escenario [SC-006]** Inicio del "Tutorial"
+
+**Dado** que David ha accedido al sistema
+**Y** ha seleccionado la funcionalidad "Nueva partida"
+**Cuando** selecciona la opción "Tutorial"
+**Entonces** debería ser redirigido a la pantalla de tutorial
+
+#### **Escenario [SC-007]** Navegación hacia la funcionalidad "Progreso"
+
+**Dado** que David ha accedido al sistema
+**Cuando** selecciona la opción "Progreso"
+**Entonces** debería ser redirigido a la pantalla de "Progreso"
+
+#### **Escenario [SC-008]** Visualización del loader mientras se carga la información
+
+**Dado** que David ha accedido al sistema
+**Cuando** el sistema está cargando la información necesaria
+**Entonces** debería visualizar un indicador de carga (loader)
+
+#### **Escenario [SC-009]** Manejo de error cuando no se carga la información
+
+**Dado** que David ha accedido al sistema
+**Y** ocurre un error al cargar la información
+**Cuando** el sistema intenta mostrar la información
+**Entonces** debería visualizar un mensaje de error claro al usuario
+**Y** debería ofrecer opciones para reintentar la carga o cerrar sesión
+
+#### **Escenario [SC-010]** Cerrar sesión
+
+**Dado** que David ha iniciado sesión en el sistema
+**Cuando** selecciona la opción "Cerrar sesión"
+**Entonces** debería ser desconectado del sistema
+**Y** debería ser redirigido a la página de inicio de sesión
+**Y** no debería poder acceder a las funcionalidades sin iniciar sesión nuevamente
+
+## Consideraciones Generales
+
+### Consideraciones técnicas
+
+#### Protección de datos sensibles del estudiante
+
+Se gestionarán los siguientes datos sensibles de los estudiantes:
+
+**Información del estudiante:**
+
+- Nombre completo
+- NRC (Número de Referencia de Curso) asociado a la asignatura Introducción al Marketing I
+
+**Información de la asignatura:**
+
+- Nombre del curso: "Introducción al Marketing I"
+- Semestre académico actual (ejemplo: 2025-20)
+
+Para cumplir con la **Ley Orgánica de Protección de Datos Personales del Ecuador (2021)**, Se utilizará protocolo HTTPS y JSON Web Token para la comunicación entre cliente y servidor, garantizando la confidencialidad de la información desde su captura hasta su almacenamiento Adicionalmente la sesión se cerrará automaticamente después de cinco minutos de inactividad.
+
+### Consideraciones UI/UX
+
+#### Responsividad
+
+La interfaz se adaptará a pantallas de escritorio con un ancho mínimo de 1025px.
+
+#### Textos y tooltips
+
+- Modo Tutorial: “Aprende el funcionamiento básico del videojuego con un escenario que abarca el tema de conducta del consumidor con guías paso a paso.”
+- Modo Normal: “Practica libremente en escenarios aleatorios de mercado.”
+- Asignaciones: “Completa tareas personalizadas asignadas por tu docente.”
+- Evaluaciones: “Demuestra tu conocimiento en evaluaciones con un solo intento.”
+- Progreso: “Revisa tu historial de partidas y tendencias de aprendizaje.”
+
+#### Navegadores compatibles
+
+- Google Chrome (versión 120 o superior)
+- Mozilla Firefox (versión 115 o superior)
+- Microsoft Edge (versión 120 o superior)
+- Safari (versión 17 o superior)
+
+#### Escalabilidad
+
+La funcionalidad debe soportar hasta 90 usuarios concurrentes, según los requisitos establecidos.
+
+#### Rendimiento
+
+El tiempo de carga de la página no debe exceder los 3 segundos,
+y las respuestas de la API no deben superar los 10 segundos, de acuerdo con los requisitos definidos.
+
+[Enlace a figma](https://www.figma.com/design/EtoLWsngop0Z2B179Mah36/MarkenX?node-id=0-1&p=f&t=goa0pm7wX0M8Lh1N-0)
+
+## Comentarios
+
+N/A
