@@ -157,50 +157,34 @@ Para cumplir con [normativa aplicable - Ejemplo: la Ley Orgánica de Protección
 
 ## Definición de Hecho
 
-### Desarrollo
+Define los criterios específicos que deben cumplirse para considerar esta historia de usuario como completada y lista para producción. Los criterios varían según la complejidad y naturaleza de cada historia. Organiza los criterios en categorías relevantes (Desarrollo, Pruebas, Calidad, Documentación, Despliegue, etc.) y utiliza checkboxes para facilitar el seguimiento.
 
-- [ ] Código completado y cumple con los estándares del equipo
-- [ ] Revisión de código completada y aprobada
-- [ ] Sin deuda técnica crítica
-- [ ] Código versionado correctamente en el repositorio
+### [Categoría 1 - Ejemplo: Desarrollo]
 
-### Pruebas
+- [ ] [Criterio específico - Ejemplo: Código completado y cumple con los estándares del equipo]
+- [ ] [Criterio específico - Ejemplo: Revisión de código completada y aprobada]
+- [ ] [Criterio específico - Ejemplo: Sin deuda técnica crítica introducida]
 
-- [ ] Pruebas unitarias escritas y pasando
-- [ ] Pruebas de integración pasando
-- [ ] Pruebas de extremo a extremo pasando
-- [ ] Casos de prueba manuales documentados
-- [ ] Pruebas de regresión pasando
+### [Categoría 2 - Ejemplo: Pruebas]
 
-### Calidad
+- [ ] [Criterio específico - Ejemplo: Pruebas unitarias escritas y pasando (cobertura mínima: 80%)]
+- [ ] [Criterio específico - Ejemplo: Pruebas de integración pasando]
+- [ ] [Criterio específico - Ejemplo: Casos de prueba manuales ejecutados y documentados]
 
-- [ ] Sin errores críticos
-- [ ] Cumple con los criterios de aceptación
-- [ ] Validaciones de seguridad completadas
-- [ ] Rendimiento validado
-- [ ] Accesibilidad validada
+### [Categoría 3 - Ejemplo: Calidad]
 
-### Documentación
+- [ ] [Criterio específico - Ejemplo: Sin errores críticos o bloqueantes]
+- [ ] [Criterio específico - Ejemplo: Cumple con todos los criterios de aceptación definidos en los escenarios]
 
-- [ ] Documentación técnica actualizada
-- [ ] Documentación de usuario actualizada
-- [ ] Comentarios en código agregados
-- [ ] README actualizado
-- [ ] Changelog actualizado
+### [Categoría 4 - Ejemplo: Documentación]
 
-### Despliegue
+- [ ] [Criterio específico - Ejemplo: Documentación técnica actualizada]
+- [ ] [Criterio específico - Ejemplo: README actualizado con nuevas funcionalidades]
 
-- [ ] Desplegado en ambiente de desarrollo
-- [ ] Desplegado en ambiente de pruebas
-- [ ] Validación en pruebas completada
-- [ ] Scripts de migración probados
-- [ ] Plan de reversión documentado
+### [Categoría 5 - Ejemplo: Despliegue]
 
-### Aceptación
-
-- [ ] Product Owner ha validado la funcionalidad
-- [ ] Criterios de aceptación aprobados por stakeholders
-- [ ] Aprobación final para producción
+- [ ] [Criterio específico - Ejemplo: Desplegado en ambiente de staging]
+- [ ] [Criterio específico - Ejemplo: Validación completada por Product Owner]
 
 ---
 
