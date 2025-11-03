@@ -2,7 +2,7 @@
 
 ---
 
-## Objetivo
+## **Objetivo**
 
 **Como** estudiante que ha iniciado sesión en el sistema,  
 **Quiero** orientarme fácilmente al ingresar,  
@@ -10,57 +10,88 @@
 
 ---
 
-## Escenarios
+## **Escenarios**
+
+- [**Característica:** Navegación hacia las funcionalidades principales](#característica-navegación-hacia-las-funcionalidades-principales)
+    - [**Escenario \[SC-001\]** Vista inicial al ingresar al sistema](#escenario-sc-001-vista-inicial-al-ingresar-al-sistema)
+    - [**Escenario \[SC-002\]** Navegación hacia la ventana de tareas](#escenario-sc-002-navegación-hacia-la-ventana-de-tareas)
+    - [**Escenario \[SC-003\]** Navegación hacia la ventana de evaluaciones](#escenario-sc-003-navegación-hacia-la-ventana-de-evaluaciones)
+    - [**Escenario \[SC-004\]** Navegación hacia la funcionalidad *"Progreso"*](#escenario-sc-004-navegación-hacia-la-funcionalidad-progreso)
+- [**Característica:** Gestión de partidas](#caracteristica-gestion-de-partidas)
+    - [**Escenario \[SC-005\]** Visualización de las subopciones dentro de la opción *"Nueva partida"*](#escenario-sc-005-visualización-de-las-subopciones-dentro-de-la-opción-nueva-partida)
+    - [**Escenario \[SC-006\]** Inicio de una nueva *"Partida normal"*](#escenario-sc-006-inicio-de-una-nueva-partida-normal)
+    - [**Escenario \[SC-007\]** Inicio del *"Tutorial"*](#escenario-sc-007-inicio-del-tutorial)
+- [**Característica:** Manejo de estados del sistema](#caracteristica-manejo-de-estados-del-sistema)
+    - [**Escenario \[SC-008\]** Visualización del loader mientras se carga la información](#escenario-sc-008-visualización-del-loader-mientras-se-carga-la-información)
+    - [**Escenario \[SC-009\]** Manejo de error cuando no se carga la información](#escenario-sc-009-manejo-de-error-cuando-no-se-carga-la-información)
+- [**Característica:** Gestión de sesión de usuario](#caracteristica-gestion-de-sesion-de-usuario)
+    - [**Escenario \[SC-010\]** Cerrar sesión](#escenario-sc-010-cerrar-sesión)
+
+---
+
+### **Antecedentes:**
+
+*Dado* un estudiante de la *Universidad de las Américas*,  
+*Y* el estudiante cursa la materia de *Introducción al Marketing I*,  
+*Y* el estudiante está registrado en un curso,  
+*Y* el estudiante ha iniciado sesión de manera exitosa en el sistema
+
+---
 
 ### **Característica:** Navegación hacia las funcionalidades principales
-
-#### **Antecedentes:**
-
-*Dado* un estudiante llamado "David",  
-*Y* David cursa la materia de "Introducción al Marketing I",  
-*Y* David está registrado en una clase,  
-*Y* David ha iniciado sesión de manera exitosa en el sistema
 
 ---
 
 #### **Escenario [SC-001]** Vista inicial al ingresar al sistema
 
-**Dado** que David ha iniciado sesión,  
+**Dado** que el estudiante ha iniciado sesión,  
 **Cuando** accede al sistema,  
 **Entonces** debería visualizar un banner con la siguiente información:
 
-- ~~Logo de la Universidad de las Américas~~
-- Nombre y NRC del curso al que pertenece David
+- Logo de la Universidad de las Américas
+- Nombre y NRC del curso al que pertenece
 - Mensaje de saludo con su nombre completo
 - Opción para cerrar sesión  
 
-**Y** debería ver accesos visibles a las demás funcionalidades principales:
+**Y** debería ver accesos visibles a las funcionalidades principales en el menú principal:
 
-- Evaluaciones
-- Nueva partida
-- Progreso  
+- **Asignaciones**
+    - [Tareas](US-003-display-student-tasks)
+    - [Evaluaciones](US-004-display-student-lessons)
+- **Nueva partida**
+    - [Normal](US-005-display-game-loader)
+    - [Tutorial](US-005-display-game-loader)
+- [**Progreso**](US-006-display-attempt-stats)  
 
-**Y** debería visualizar la funcionalidad *"Tareas"* como vista por defecto
-
----
-
-#### **Escenario [SC-002]** Navegación hacia la funcionalidad *"Tareas"*
-
-**Dado** que David ha accedido al sistema,  
-**Cuando** selecciona la opción *"Tareas"*,  
-**Entonces** debería ser redirigido a la pantalla de *"Tareas"*
+**Y** debería visualizar la ventana de tareas como vista por defecto
 
 ---
 
-#### **Escenario [SC-003]** Navegación hacia la funcionalidad *"Evaluaciones"*
+#### **Escenario [SC-002]** Navegación hacia la ventana de tareas
+
+**Dado** que el estudiante ha accedido al sistema,  
+**Cuando** selecciona la opción [Tareas](US-003-display-student-tasks) en el menú principal,  
+**Entonces** debería ser redirigido a la pantalla de tareas
+
+---
+
+#### **Escenario [SC-003]** Navegación hacia la ventana de evaluaciones
 
 **Dado** que David ha accedido al sistema,  
 **Cuando** selecciona la opción *"Evaluaciones"*,  
-**Entonces** debería ser redirigido a la pantalla de *"Evaluaciones"*
+**Entonces** debería ser redirigido a la pantalla de evaluaciones
 
 ---
 
-#### **Escenario [SC-004]** Visualización de las opciones dentro de *"Nueva partida"*
+#### **Escenario [SC-004]** Navegación hacia la funcionalidad *"Progreso"*
+
+**Dado** que David ha accedido al sistema,  
+**Cuando** selecciona la opción *"Progreso"*,  
+**Entonces** debería ser redirigido a la pantalla de progreso
+
+---
+
+#### **Escenario [SC-005]** Visualización de las subopciones dentro de la opción *"Nueva partida"*
 
 **Dado** que David ha accedido al sistema,  
 **Cuando** selecciona la opción *"Nueva partida"*,  
@@ -71,7 +102,7 @@
 
 ---
 
-#### **Escenario [SC-005]** Inicio de una nueva *"Partida normal"*
+#### **Escenario [SC-006]** Inicio de una nueva *"Partida normal"*
 
 **Dado** que David ha accedido al sistema,  
 **Y** ha seleccionado la funcionalidad *"Nueva partida"*,  
@@ -80,20 +111,12 @@
 
 ---
 
-#### **Escenario [SC-006]** Inicio del *"Tutorial"*
+#### **Escenario [SC-007]** Inicio del *"Tutorial"*
 
 **Dado** que David ha accedido al sistema,  
 **Y** ha seleccionado la funcionalidad *"Nueva partida"*,  
 **Cuando** selecciona la opción *"Tutorial"*,  
 **Entonces** debería ser redirigido a la pantalla de tutorial
-
----
-
-#### **Escenario [SC-007]** Navegación hacia la funcionalidad *"Progreso"*
-
-**Dado** que David ha accedido al sistema,  
-**Cuando** selecciona la opción *"Progreso"*,  
-**Entonces** debería ser redirigido a la pantalla de progreso
 
 ---
 
@@ -176,6 +199,8 @@ La interfaz se adaptará a pantallas de escritorio con un ancho mínimo de 1025p
 - Progreso: "Revisa tu historial de partidas y tendencias de aprendizaje."
 
 #### Navegadores compatibles
+
+<!-- TODO: Revisar si esto hay que corregir -->
 
 - Google Chrome (versión 120 o superior)
 - Mozilla Firefox (versión 115 o superior)

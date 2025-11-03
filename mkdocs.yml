@@ -1,5 +1,15 @@
 site_name: MarkenX Wiki
+
 nav:
   - Inicio: index.md
   - Documentación:
       - Historias de Usuario: user-stories/stories/index.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.extra
+  - pymdownx.tasklist
+  - pymdownx.betterem
