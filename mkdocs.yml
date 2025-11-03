@@ -1,0 +1,5 @@
+site_name: MarkenX Wiki
+nav:
+  - Inicio: index.md
+  - Documentación:
+      - Historias de Usuario: user-stories/stories/index.md
