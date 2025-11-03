@@ -46,11 +46,11 @@ La calificación final se calcula mediante:
 
 [Ejemplo: "Disponibilidad de funcionalidades según rol"]
 
-| Rol | Funcionalidad A | Funcionalidad B | Funcionalidad C |
-|-----|----------------|-----------------|-----------------|
-| Estudiante | ✓ | ✓ | ✗ |
-| Docente | ✓ | ✓ | ✓ |
-| Administrador | ✓ | ✓ | ✓ |
+| Rol           | Funcionalidad A | Funcionalidad B | Funcionalidad C |
+| ------------- | --------------- | --------------- | --------------- |
+| Estudiante    | ✓               | ✓               | ✗               |
+| Docente       | ✓               | ✓               | ✓               |
+| Administrador | ✓               | ✓               | ✓               |
 
 ### **RN-004:** [Nombre de regla condicional]
 
